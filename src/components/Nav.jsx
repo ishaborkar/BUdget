@@ -1,5 +1,6 @@
 // rrd imports
 import { Form, NavLink } from "react-router-dom"
+import { Link } from "react-router-dom"; // Add this line
 
 // library
 import { TrashIcon } from '@heroicons/react/24/solid'
@@ -36,6 +37,10 @@ const Nav = ({ userName }) => {
           </Form>
         )
       }
+      <Link to="/budget-optimization" className="btn btn--primary">
+            Optimize Budget
+      </Link>
+          
     </nav>
   )
 }

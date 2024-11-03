@@ -16,6 +16,7 @@ import Dashboard, { dashboardAction, dashboardLoader } from "./pages/Dashboard";
 import Error from "./pages/Error";
 import BudgetPage, { budgetAction, budgetLoader } from "./pages/BudgetPage";
 import Tips from "./pages/Tips";
+import BudgetOptimizationPage, { budgetOptimizationLoader } from "./pages/BudgetOptimizationPage";
 import Nutritional from "./pages/Nutritional";
 import ExpensesPage, {
   expensesAction,
@@ -55,6 +56,14 @@ const router = createBrowserRouter([
         element: <Tips />,
         errorElement: <Error />,
       },
+
+      {
+        path: "budget-optimization", // New route for budget optimization
+        element: <BudgetOptimizationPage />,
+        loader: budgetOptimizationLoader,
+        errorElement: <Error />,
+      },
+
 
       {
         path: "nutritional",
